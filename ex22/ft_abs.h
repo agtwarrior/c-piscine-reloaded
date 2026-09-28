@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-#define ABS(value) ((value > 0) *  value - (value < 0) * value)
+# define ABS(Value) ((((Value) > 0) - ((Value) < 0)) * (Value))
+
+#endif

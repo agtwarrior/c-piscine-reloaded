@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-int	str_len(char *str)
+static int	str_len(char *str)
 {
 	int	i;
 
@@ -28,8 +27,10 @@ char	*ft_strdup(char *src)
 	char	*str;
 	int		i;
 
+	str = malloc(sizeof(char) * (str_len(src) + 1));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
-	str = malloc(str_len(src) * sizeof(char));
 	while (src[i])
 	{
 		str[i] = src[i];
@@ -38,11 +39,3 @@ char	*ft_strdup(char *src)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main(void)
-// {
-// 	char str[] = "hola";
-
-// 	printf("%s \n", ft_strdup(str));
-// 	return (0);
-// }

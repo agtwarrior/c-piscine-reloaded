@@ -10,22 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
-	char	num;
+	char	c;
 
-	num = '0';
-	while (num <= '9')
+	c = '0';
+	while (c <= '9')
 	{
-		write(1, &num, 1);
-		num++;
+		ft_putchar(c);
+		c++;
 	}
 }
-
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return (0);
-// }

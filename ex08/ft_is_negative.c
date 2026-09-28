@@ -10,22 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_is_negative(int num)
+void	ft_is_negative(int n)
 {
-	if (num < 0)
-	{
-		write(1, "N", 1);
-	}
+	if (n < 0)
+		ft_putchar('N');
 	else
-	{
-		write(1, "P", 1);
-	}
+		ft_putchar('P');
 }
-
-// int	main(void)
-// {
-// 	ft_is_negative(0);
-// 	return (0);
-// }

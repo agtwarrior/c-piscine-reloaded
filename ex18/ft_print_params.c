@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 int	main(int argc, char **argv)
 {
@@ -23,10 +23,10 @@ int	main(int argc, char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			write (1, &argv[i][j], 1);
+			ft_putchar(argv[i][j]);
 			j++;
 		}
-		write (1, "\n", 1);
+		ft_putchar('\n');
 		i++;
 	}
 	return (0);
